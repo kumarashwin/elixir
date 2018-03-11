@@ -13,6 +13,18 @@ main = fn (a,b,c) ->
   IO.puts(fizz_buzz.(a,b,c))
 end
 
-main.(0,0,0)
-main.(1,0,3)
-main.(1,2,3)
+main_2 = fn (n) ->
+  main.(
+    rem(n, 3),
+    rem(n, 5),
+    n
+  )
+end
+
+# main.(0,0,0)
+# main.(1,0,3)
+# main.(1,2,3)
+
+main_2.(10)
+main_2.(11)
+main_2.(12)
